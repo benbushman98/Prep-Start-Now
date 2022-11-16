@@ -5,151 +5,129 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: '' },
-    { name: '' },
-    { name: '' },
-    { name: '' },
-    { name: '' }
+    { name: 'Featured Brands' },
+    { name: 'Electronics' },
+    { name: 'Clothing, Shoes, & Accessories' },
+    { name: 'Emergency Prep' },
+    { name: 'Food Storage/72-hour Kits' },
+    { name: 'Household Essentials' },
+    { name: 'Auto Industrial' },
+    { name: 'Promotions' },
+    { name: 'Health & Safety' },
   ]);
 
-  console.log('categories seeded');
+  console.log('🌱 Categories');
 
   await Product.deleteMany();
 
   const products = await Product.insertMany([
     {
-      name: '',
+      name: 'Walkie-talkie',
       description:
-        '',
-      image: '',
-      category: ,
-      price: ,
-      quantity: 
-    },
-    {
-      name: '',
-      description:
-        '',
-      image: '',
-      category: ,
-      price: ,
-      quantity: 
-    },
-    {
-      name: '',
-      category: ,
-      description:
-        '',
-      image: '',
-      price: ,
-      quantity: 
-    },
-    {
-      name: '',
+        '20 mile indoor and outdoor range',
+      image: 'radio.jpeg',
       category: categories[1]._id,
-      description:
-        '',
-      image: '',
-      price: ,
-      quantity: 
+      price: 29.99,
+      quantity: 10
     },
     {
-      name: '',
-      category: categories[1]._id,
+      name: 'Hiking Boots',
       description:
-        '',
-      image: '',
-      price: ,
-      quantity: 
+        'Comfortable, durable boots that are perfect for rough terrain',
+      image: 'boots.jpeg',
+      category: categories[2]._id,
+      price: 99.99,
+      quantity: 20
     },
     {
-      name: '',
-      category: ,
+      name: 'First Aid Kit',
       description:
-        '',
-      image: '',
-      price: ,
-      quantity: 
+        'All-in-one kit that holds supplies for injuries',
+      image: 'firstaid.jpeg',
+      category: categories[8]._id,
+      price: 34.99,
+      quantity: 30
     },
     {
-      name: '',
-      category: ,
+      name: 'Freeze Dried Meals',
       description:
-        '',
-      image: '',
-      price: ,
-      quantity: 
+        'Breakfast, lunch, and dinner freeze dried meal packets',
+      image: 'food.png',
+      category: categories[4]._id,
+      price: 149.99,
+      quantity: 50 
     },
     {
-      name: '',
-      category: ,
+      name: 'Toilet Paper',
       description:
-        '',
-      image: '',
-      price: ,
-      quantity: 
+        '20 pack of biodegradable toilet paper',
+      image: 'toiletpaper.webp',
+      category: categories[5]._id,
+      price: 19.99,
+      quantity: 20
     },
     {
-      name: '',
-      category: ,
-      description: '',
-      image: '',
-      price: ,
-      quantity: 
+      name: 'Portable Car Jump Starter',
+      description:
+        'Portable battery device that will jump start a vehicle',
+      image: 'carjump.jpg',
+      category: categories[6]._id,
+      price: 79.99,
+      quantity: 15
     },
     {
-      name: '',
-      category: ,
+      name: 'Water Pack',
       description:
-        '',
-      image: '',
-      price: ,
-      quantity: 
+        'Fast and easy hands-free hydration for every outdoor excursion',
+      image: 'waterpack.webp',
+      category: categories[3]._id,
+      price: 9.99,
+      quantity: 25
     },
     {
-      name: '',
-      category: ,
+      name: 'Tent',
       description:
-        '',
-      image: '',
-      price: ,
-      quantity: 
+        'Lightweight backpacking tent',
+      image: 'tent.webp',
+      category: categories[7]._id,
+      price: 149.99,
+      quantity: 10
     },
     {
-      name: '',
-      category: ,
+      name: 'Mammoth Sleeping Bag',
       description:
-        '',
-      image: '',
-      price: ,
-      quantity: 
-    }
+        'The Canvas Mammoth Double Sleeping Bag is the perfect two-person sleep system when you’re looking to enjoy the outdoors together',
+      image: 'sleepingbag.webp',
+      category: categories[0]._id,
+      price: 168.99,
+      quantity: 20
+    },
   ]);
 
-  console.log('');
+  console.log('🌱 Products');
 
   await User.deleteMany();
 
   await User.create({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
+    firstName: 'Jane',
+    lastName: 'Doe',
+    email: 'jane@email.com',
+    password: 'password123',
     orders: [
       {
-        products: []
+        products: [products[0]._id]
       }
     ]
   });
 
   await User.create({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: ''
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'john@email.com',
+    password: 'test123'
   });
 
-  console.log('All users info has been populated');
+  console.log('🌱 Users');
 
   process.exit();
 });
