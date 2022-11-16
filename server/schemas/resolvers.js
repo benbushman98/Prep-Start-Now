@@ -38,7 +38,7 @@ const resolvers = {
         return user;
       }
 
-      throw new AuthenticationError('Failed to log in');
+      throw new AuthenticationError('Please log-in to continue');
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
@@ -50,7 +50,7 @@ const resolvers = {
         return user.orders.id(_id);
       }
 
-      throw new AuthenticationError('Failed to log in');
+      throw new AuthenticationError('Please log-in to continue');
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
@@ -106,14 +106,14 @@ const resolvers = {
         return order;
       }
 
-      throw new AuthenticationError('Failed to log in');
+      throw new AuthenticationError('Please log-in to continue');
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(context.user._id, args, { new: true });
       }
 
-      throw new AuthenticationError('Failed to log in');
+      throw new AuthenticationError('Please log-in to continue');
     },
     updateProduct: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
@@ -124,13 +124,13 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('Wrong username');
+        throw new AuthenticationError('Email not found');
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Wrong password');
+        throw new AuthenticationError('Incorrect password');
       }
 
       const token = signToken(user);
