@@ -1,48 +1,49 @@
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  Container,
-  Flex,
-  HStack,
-  Center,
-  IconButton,
-  useBreakpointValue,
-  useColorModeValue,
-} from '@chakra-ui/react'
-import * as React from 'react'
-import { FiMenu } from 'react-icons/fi'
-// import Logo from './logo.png'
-
+import { Image, Flex, Button, HStack, Center, ButtonGroup, chakra, Wrap, WrapItem } from '@chakra-ui/react';
+// import Logo from '../public/logo.svg';
+// import { Link } from 'react-scroll'
+import React from "react";
+import MobileDrawer from './MobileDrawer';
 const Header = () => {
-  const isDesktop = useBreakpointValue({ base: false, lg: true })
   return (
-    <Box as="section" pb={{ base: '12', md: '24' }}>
-      <Box as="nav" bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')}>
-        <Container py={{ base: '4', lg: '5' }}>
-          <HStack spacing="8" justify="center">
-            {isDesktop ? (
-              <Flex justify="center" flex="1">
-                <ButtonGroup variant="link" spacing="10">
-                  <Center w="100%">
-                    {['Featured Brands', 'Electronics', 'Food Storage/72-hour Kits', 'Household Essentials', 'Auto Industrial', 'Promotions', 'Health & Safety', 'Resource Center'].map((item) => (
-                      <Button spacing="8" m={6} key={item}>{item}</Button>
-                    ))}
-                  </Center>
-                </ButtonGroup>
-              </Flex>
+    <chakra.header id="header">
+      <Flex
+        w="100%"
+        px="6"
+        py="5"
+        align="center"
+        justify="space-between"
+      >
+        <Center w="100%">
+          {/* // Logo */}
+          {/* <Image src={Logo.src} h="50px" /> */}
+          {/* // Nav Items */}
+          <HStack spacing="8" justify="center" display={{ base: "none", md: "flex" }}>
+            <Flex justify="center" flex="1">
 
-            ) : (
-              <IconButton
-                variant="ghost"
-                icon={<FiMenu fontSize="1.25rem" />}
-                aria-label="Open Menu"
-              />
-            )}
+              <ButtonGroup variant="link" spacing="10">
+                
+                  <Wrap spacing='10px' justify='center'>
+
+                    {['Featured Brands', 'Electronics', 'Food Storage/72-hour Kits', 'Household Essentials', 'Auto Industrial', 'Promotions', 'Health & Safety', 'Resource Center'].map((item) => (
+                      <WrapItem>
+                        <Button spacing="8" m={6} key={item}>{item}</Button>
+                      </WrapItem>
+                    ))}
+
+                  </Wrap>
+             
+              </ButtonGroup>
+
+            </Flex>
           </HStack>
-        </Container>
-      </Box>
-    </Box>
-  )
+          {/* // Call to action items */}
+          <HStack >
+            <MobileDrawer display={{ base: "none", md: "flex" }} />
+          </HStack>
+        </Center>
+      </Flex>
+
+    </chakra.header>
+  );
 }
 export default Header;
