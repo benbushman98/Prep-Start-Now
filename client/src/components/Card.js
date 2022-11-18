@@ -17,7 +17,7 @@ function DisplayCard(props) {
                         <Stack mt='6' spacing='3'>
                             <Heading size='md'>{item.name}</Heading>
                             <Text>
-                                {item.itemText}
+                                {item.text}
                             </Text>
                             <Text color='blue.600' fontSize='2xl'>
                                 ${item.price}
