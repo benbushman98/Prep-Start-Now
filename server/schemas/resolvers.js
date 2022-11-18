@@ -123,7 +123,7 @@ const resolvers = {
     login: async (parent, { email, password }) => {
       const customer = await Customer.findOne({ email });
 
-      if (!user) {
+      if (!customer) {
         throw new AuthenticationError('Email not found');
       }
 
@@ -133,7 +133,7 @@ const resolvers = {
         throw new AuthenticationError('Incorrect password');
       }
 
-      const token = signToken(user);
+      const token = signToken(customer);
 
       return { token, customer };
     }
