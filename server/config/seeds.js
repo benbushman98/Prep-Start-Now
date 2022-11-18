@@ -127,7 +127,7 @@ db.once('open', async () => {
     password: 'test123'
   });
 
-  console.log('🌱 Users');
+  console.log('🌱 Customers');
 
   process.exit();
 });
