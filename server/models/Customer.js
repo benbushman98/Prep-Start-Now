@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
-const Order = require('./Order');
+const Purchase = require('./Purchase');
 
-const user = new Schema({
+const customer = new Schema({
   firstName: {
     type: String,
     required: true,
@@ -25,11 +25,11 @@ const user = new Schema({
     required: true,
     minlength: 5
   },
-  orders: [Order.schema]
+  purchases: [Purchase.schema]
 });
 
 
-user.pre('save', async function(next) {
+customer.pre('save', async function(next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -39,10 +39,10 @@ user.pre('save', async function(next) {
 });
 
 
-user.methods.isCorrectPassword = async function(password) {
+customer.methods.isCorrectPassword = async function(password) {
   return await bcrypt.compare(password, this.password);
 };
 
-const User = mongoose.model('User', user);
+const Customer = mongoose.model('Customer', customer);
 
-module.exports = User;
+module.exports = Customer;

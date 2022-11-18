@@ -38,7 +38,7 @@ const resolvers = {
         return customer;
       }
 
-      throw new AuthenticationError('Failed to log in');
+      throw new AuthenticationError('Please log-in to continue');
     },
     purchase: async (parent, { _id }, context) => {
       if (context.customer) {
@@ -50,7 +50,7 @@ const resolvers = {
         return customer.purchases.id(_id);
       }
 
-      throw new AuthenticationError('Failed to log in');
+      throw new AuthenticationError('Please log-in to continue');
     },
     // checkout: async (parent, args, context) => {
     //   const url = new URL(context.headers.referer).origin;
@@ -106,14 +106,14 @@ const resolvers = {
         return purchase;
       }
 
-      throw new AuthenticationError('Failed to log in');
+      throw new AuthenticationError('Please log-in to continue');
     },
     updateCustomer: async (parent, args, context) => {
       if (context.customer) {
         return await Customer.findByIdAndUpdate(context.customer._id, args, { new: true });
       }
 
-      throw new AuthenticationError('Failed to log in');
+      throw new AuthenticationError('Please log-in to continue');
     },
     updateItem: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
@@ -123,14 +123,14 @@ const resolvers = {
     login: async (parent, { email, password }) => {
       const customer = await Customer.findOne({ email });
 
-      if (!customer) {
-        throw new AuthenticationError('Wrong username');
+      if (!user) {
+        throw new AuthenticationError('Email not found');
       }
 
       const correctPassword = await customer.isCorrectPassword(password);
 
-      if (!correctPassword) {
-        throw new AuthenticationError('Wrong password');
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect password');
       }
 
       const token = signToken(user);
