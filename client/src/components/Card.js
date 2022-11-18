@@ -9,14 +9,14 @@ function DisplayCard(props) {
                     <Card maxW='sm' minW='sm' align="center">
                         <CardBody>
                             <Image
-                                src={item.imageURL}
+                                src={item.image}
                                 alt='Green double couch with wooden legs'
                                 borderRadius='lg'
                             />
                             <Stack mt='6' spacing='3'>
                                 <Heading size='md'>{item.name}</Heading>
                                 <Text>
-                                    {item.text}
+                                    {item.description}
                                 </Text>
                                 <Text color='blue.600' fontSize='2xl'>
                                     ${item.price}
