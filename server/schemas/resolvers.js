@@ -129,7 +129,7 @@ const resolvers = {
 
       const correctPassword = await customer.isCorrectPassword(password);
 
-      if (!correctPw) {
+      if (!correctPassword) {
         throw new AuthenticationError('Incorrect password');
       }
 
