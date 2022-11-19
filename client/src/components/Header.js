@@ -1,7 +1,7 @@
 import {
-  //  Image,
-   Flex, Button, HStack, ButtonGroup, chakra, Wrap, WrapItem } from '@chakra-ui/react';
-// import Logo from '../public/logo.svg';
+  Image,
+  Flex, Button, HStack, Center, ButtonGroup, chakra, Wrap, WrapItem,
+} from '@chakra-ui/react';
 // import { Link } from 'react-scroll'
 import React from "react";
 import MobileDrawer from './MobileDrawer';
@@ -11,38 +11,51 @@ const Header = () => {
       <Flex
         w="100%"
         px="6"
-        py="5"
+        py="7"
         align="center"
         justify="center"
-      >
-        {/* <Center w="100%"> */}
-          {/* // Logo */}
-          {/* <Image src={Logo.src} h="50px" /> */}
-          {/* // Nav Items */}
-          <HStack spacing="8" display={{ base: "none", md: "flex" }}>
-            <Flex flex="1">
+        bgColor="transparent">
 
-              <ButtonGroup variant="link" spacing="10">
-                
-                  <Wrap spacing='10px' justify='center'>
+        {/* // Nav Items */}
+        <HStack spacing="8" display={{ base: "none", md: "flex" }}>
+          <Flex flex="1">
 
-                    {['Featured Brands', 'Electronics', 'Food Storage/72-hour Kits', 'Household Essentials', 'Auto Industrial', 'Promotions', 'Health & Safety', 'Resource Center'].map((item) => (
-                      <WrapItem>
-                        <Button spacing="4" m={4} key={item}>{item}</Button>
-                      </WrapItem>
-                    ))}
+            <ButtonGroup variant="link" spacing="10">
 
-                  </Wrap>
-             
-              </ButtonGroup>
+              <Wrap spacing='10px' justify='center'>
 
-            </Flex>
-          </HStack>
-          {/* // Call to action items */}
-          <HStack justify="right" >
-            <MobileDrawer display={{ base: "none", md: "flex" }} justify="right"/>
-          </HStack>
-        {/* </Center> */}
+                {['Featured Brands', 'Electronics', 'Food Storage/72-hour Kits', 'Household Essentials', 'Auto Industrial', 'Promotions', 'Health & Safety', 'Resource Center'].map((item) => (
+                  <WrapItem>
+                    <Button _hover={{
+                      color: "#FFB900",
+                    }}
+                      fontSize='lg'
+                      as='b'
+                      color={'#FFF'} spacing="4" m={4} key={item}>{item}</Button>
+                  </WrapItem>
+                ))}
+
+              </Wrap>
+
+            </ButtonGroup>
+
+          </Flex>
+        </HStack>
+        <HStack >
+          <MobileDrawer display={{ base: "none", md: "flex" }} />
+        </HStack>
+
+        {/* Shopping Cart */}
+
+        <Center>
+          <Image
+            src='/images/cart.png'
+            borderRadius={"2xl"}
+            boxSize={'50px'}
+            objectFit="cover"
+            alt="TEMP SHOPPING CART IMAGE"
+          />
+        </Center>
       </Flex>
 
     </chakra.header>
