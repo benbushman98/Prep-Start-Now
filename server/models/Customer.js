@@ -1,9 +1,10 @@
+//IMPORTS
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 const Purchase = require('./Purchase');
 
+//CUSTOMER SCHEMA FOR LOGIN/SIGNUP
 const customer = new Schema({
   firstName: {
     type: String,
@@ -28,7 +29,7 @@ const customer = new Schema({
   purchases: [Purchase.schema]
 });
 
-
+//SALT PASSWORD
 customer.pre('save', async function(next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
@@ -38,11 +39,12 @@ customer.pre('save', async function(next) {
   next();
 });
 
-
+//CHECK FOR CORRECT PASSWORD MATCH
 customer.methods.isCorrectPassword = async function(password) {
   return await bcrypt.compare(password, this.password);
 };
 
+//CUSTOMER MODEL
 const Customer = mongoose.model('Customer', customer);
 
 module.exports = Customer;
