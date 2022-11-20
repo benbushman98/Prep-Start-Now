@@ -22,7 +22,7 @@ Prep Starts Now is an e-commerce site that uses queries and mutations for retrie
 * Mongoose ODM for the database
 * Hosted on ........?
 * Authenticated with JWT
-* Chakra CSS Framework
+* Chakra UI
 
 ## Future Development
 * Include 'My Account' page that shows user account details
