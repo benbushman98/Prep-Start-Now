@@ -6,10 +6,10 @@ Prep Starts Now is an e-commerce site that uses queries and mutations for retrie
 ## User Story
 
 `As a user, I want to shop for emergency preparedness essentials.`<br />
-`When I open the site, I can view all products, prices, and the amount in stock.`<br />
-`When I click on a product, I can view the product description and price.`<br />
-`When I click 'Add to cart' on a product, the product is sent to my cart.`<br />
-`When I click on the cart icon, I can edit the product quantity or delete a product.`<br />
+`When I am shopping, I can view all items, prices, and the amount in stock.`<br />
+`When I click on an item, I can view the item description and price.`<br />
+`When I click 'Add to cart' on an item, the item is sent to my cart.`<br />
+`When I click on the cart icon, I can edit the item quantity or delete an item.`<br />
 `When I am done shopping, I will need to log-in or sign-up on order to check-out.`<br />
 `Once I am logged-in, I can click 'Checkout' and enter my payment information.`<br />
 
@@ -20,9 +20,9 @@ Prep Starts Now is an e-commerce site that uses queries and mutations for retrie
 * Node.js and Express.js server
 * MongoDB
 * Mongoose ODM for the database
-* X-Mission Hosting
+* Hosted on ........?
 * Authenticated with JWT
-* ====> CSS FRAMEWORK GOES HERE <====
+* Chakra CSS Framework
 
 ## Future Development
 * Include 'My Account' page that shows user account details
