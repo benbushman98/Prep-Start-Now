@@ -6,15 +6,19 @@ import Footer from './components/Footer'
 // 1. import `ChakraProvider` component
 import { ChakraProvider, Box } from '@chakra-ui/react'
 
+
 function App() {
   // 2. Wrap ChakraProvider at the root of your app
   return (
     <ChakraProvider>
       <Box>
         <div style={{
-          background: `url(./images/logoBig.png)`,
+          background: `url(./images/logoBigCrop.webp)`,
           backgroundSize: "cover",
-          minHeight: "150vh",
+          minHeight: "140vh",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+   
          
         }}>
           <Box>
