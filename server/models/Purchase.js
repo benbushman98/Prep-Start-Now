@@ -1,7 +1,8 @@
+//MONGOOSE IMPORT
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
 
+//PURCHASE SCHEMA
 const purchase = new Schema({
   purchaseDate: {
     type: Date,
@@ -15,6 +16,7 @@ const purchase = new Schema({
   ]
 });
 
+//PURCHASE MODEL
 const Purchase = mongoose.model('Purchase', purchase);
 
 module.exports = Purchase;
