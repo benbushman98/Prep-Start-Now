@@ -14,29 +14,34 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
+//MIDDLEWARE FOR POST & PUT REQUESTS 
+//because we are sending data & asking the server to accept or store 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+//MIDDLEWARE FOR IMAGES FROM CLIENT FOLDER
 app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
+//WHEN IN PRODUCTION, USE CLIENT BUILD FOLDER
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
+//GET REQUEST FOR INDEX.HTML
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 
-
+//APOLLO SERVER START FUNCTION
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
   server.applyMiddleware({ app });
   
   db.once('open', () => {
     app.listen(PORT, () => {
-      console.log(`API server running on port ${PORT}!`);
-      console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+      console.log(`⚡️ Running on port ${PORT}! ⚡️`);
+      console.log(`✨ GraphQL >>  http://localhost:${PORT}${server.graphqlPath} ✨`);
     })
   })
   };
