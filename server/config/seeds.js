@@ -1,9 +1,12 @@
+//IMPORTS
 const db = require('./connection');
 const { Customer, Item, Category } = require('../models');
 
+//CATEGORIES
 db.once('open', async () => {
   await Category.deleteMany();
 
+  //Category Names
   const categories = await Category.insertMany([
     { name: 'Featured Brands' },
     { name: 'Electronics' },
@@ -18,8 +21,10 @@ db.once('open', async () => {
 
   console.log('🌱 Categories');
 
+  //ITEMS
   await Item.deleteMany();
 
+  //Item seed data
   const items = await Item.insertMany([
     {
       name: 'Walkie-talkie',
@@ -104,10 +109,12 @@ db.once('open', async () => {
     },
   ]);
 
-  console.log('🌱 Products');
+  console.log('🌱 Items');
 
+  //CUSTOMERS
   await Customer.deleteMany();
-
+  
+  //Customer seed data
   await Customer.create({
     firstName: 'Jane',
     lastName: 'Doe',
