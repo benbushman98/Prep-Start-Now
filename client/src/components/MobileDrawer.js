@@ -22,7 +22,7 @@ const MobileDrawer = () => {
             >
                 <VStack alignItems="left">
                     {['Featured Brands', 'Electronics', 'Food Storage/72-hour Kits', 'Household Essentials', 'Auto Industrial', 'Promotions', 'Health & Safety', 'Resource Center'].map((item) => (
-                        <Button spacing="8" m={6} key={item}>{item}</Button>
+                        <Button spacing="8" m={4} key={item}>{item}</Button>
                     ))}
                 </VStack>
             </Drawer>

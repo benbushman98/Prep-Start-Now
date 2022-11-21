@@ -1,9 +1,12 @@
+//IMPORTS
 const db = require('./connection');
-const { User, Product, Category } = require('../models');
+const { Customer, Item, Category } = require('../models');
 
+//CATEGORIES
 db.once('open', async () => {
   await Category.deleteMany();
 
+  //Category Names
   const categories = await Category.insertMany([
     { name: 'Featured Brands' },
     { name: 'Electronics' },
@@ -18,9 +21,11 @@ db.once('open', async () => {
 
   console.log('🌱 Categories');
 
-  await Product.deleteMany();
+  //ITEMS
+  await Item.deleteMany();
 
-  const products = await Product.insertMany([
+  //Item seed data
+  const items = await Item.insertMany([
     {
       name: 'Walkie-talkie',
       description:
@@ -104,30 +109,32 @@ db.once('open', async () => {
     },
   ]);
 
-  console.log('🌱 Products');
+  console.log('🌱 Items');
 
-  await User.deleteMany();
-
-  await User.create({
+  //CUSTOMERS
+  await Customer.deleteMany();
+  
+  //Customer seed data
+  await Customer.create({
     firstName: 'Jane',
     lastName: 'Doe',
     email: 'jane@email.com',
     password: 'password123',
     orders: [
       {
-        products: [products[0]._id]
+        items: [items[0]._id]
       }
     ]
   });
 
-  await User.create({
+  await Customer.create({
     firstName: 'John',
     lastName: 'Doe',
     email: 'john@email.com',
     password: 'test123'
   });
 
-  console.log('🌱 Users');
+  console.log('🌱 Customers');
 
   process.exit();
 });

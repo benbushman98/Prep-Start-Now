@@ -1,5 +1,7 @@
+//Import GraphQL
 const { gql } = require('apollo-server-express');
 
+//Set up type defs for all schemas, auth, queries, and mutations
 const typeDefs = gql`
   type Category {
     _id: ID
@@ -30,13 +32,9 @@ const typeDefs = gql`
     purchases: [Purchase]
   }
 
-  type Checkout {
-    session: ID
-  }
-
   type Auth {
     token: ID
-    user: User
+    customer: Customer
   }
 
   type Query {
@@ -45,7 +43,6 @@ const typeDefs = gql`
     item(_id: ID!): Item
     customer: Customer
     purchase(_id: ID!): Purchase
-    checkout(items: [ID]!): Checkout
   }
 
   type Mutation {

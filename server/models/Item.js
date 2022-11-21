@@ -1,7 +1,8 @@
+//MONGOOSE IMPORT
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
 
+//ITEM SCHEMA
 const item = new Schema({
   name: {
     type: String,
@@ -31,6 +32,7 @@ const item = new Schema({
   }
 });
 
+//ITEM MODEL
 const Item = mongoose.model('Item', item);
 
 module.exports = Item;
