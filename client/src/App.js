@@ -1,25 +1,21 @@
-import * as React from 'react'
-import Home from './components/pages/Home'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import * as React from 'react';
+import Home from './components/pages/Home';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-// 1. import `ChakraProvider` component
-import { ChakraProvider, Box } from '@chakra-ui/react'
+import { ChakraProvider, Box } from '@chakra-ui/react';
 
 
 function App() {
-  // 2. Wrap ChakraProvider at the root of your app
   return (
     <ChakraProvider>
       <Box>
         <div style={{
-          background: `url(./images/logoBigCrop.webp)`,
+          background: `url(./images/logoBigCrop.webp`,
           backgroundSize: "cover",
           minHeight: "140vh",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-   
-         
         }}>
           <Box>
             <Header />

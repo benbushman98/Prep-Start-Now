@@ -8,10 +8,13 @@ import MobileDrawer from './MobileDrawer';
 const Header = () => {
   return (
     <chakra.header id="header">
+      <Center color={'#FFB900'} fontSize={'6xl'} as='b' align={'center'}>
+        PREP STARTS NOW
+      </Center>
       <Flex
         w="100%"
         px="6"
-        py="7"
+        pb="7"
         align="center"
         justify="center"
         bgColor="transparent">
@@ -27,7 +30,9 @@ const Header = () => {
                 {['Featured Brands', 'Electronics', 'Food Storage/72-hour Kits', 'Household Essentials', 'Auto Industrial', 'Promotions', 'Health & Safety', 'Resource Center'].map((item) => (
                   <WrapItem>
                     <Button _hover={{
-                      color: "#FFB900",
+                      color: "#D3D3D3",
+                      cursor: "pointer",
+                      textDecoration: "underline",
                     }}
                       fontSize='lg'
                       as='b'
