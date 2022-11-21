@@ -20,7 +20,7 @@ Prep Starts Now is an e-commerce site that uses queries and mutations for retrie
 * Node.js and Express.js server
 * MongoDB
 * Mongoose ODM for the database
-* Hosted on Herkoku
+* Hosted on Heroku
 * Authenticated with JWT
 * Chakra UI
 
