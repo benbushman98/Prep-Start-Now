@@ -8,10 +8,30 @@ const Footer = () => {
       left: "0",
       bottom: "0",
       width: "100%",
-      backgroundColor: "red",
+      backgroundColor: "#023859",
       textAlign: "center",
-    }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+    }}>We accept</div>
   )
 }
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer_inner">
+      <div class="footer_item footer_item--newsletter is-first">
+        <p class="footer_item-title heading heading--small">Join Our Newsletter</p>
+      <div class="footer_item-content">
+        <p>Product info, discounts and more-straight to your inbox!</p>
+        
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer_item footer_item--social media">
+    <p class="footer_item-title heading heading--small">Get in Touch with Prep Start Now</p>
+  </div>
+  <div class="footer_aside">
+    <span class="footer_copyright text--xsmall text--subdued">2022 Prep Start Now</span>
+  </div>
+</footer>
 
 export default Footer
