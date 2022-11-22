@@ -1,5 +1,5 @@
 import React from 'react';
-import DisplayCard from '../Card';
+import DisplayCard from '../components/Card';
 
 const items = [
     {
