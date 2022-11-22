@@ -2,6 +2,15 @@ import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, Butto
 
 
 function DisplayCard(props) {
+    const {
+        image,
+        name,
+        description,
+        // _id,
+        price,
+        quantity
+      } = props;
+
     return (
         <div>
             <Wrap spacing='20px'>
@@ -9,17 +18,20 @@ function DisplayCard(props) {
                     <Card maxW='sm' minW='sm' align="center">
                         <CardBody>
                             <Image
-                                src={item.image}
-                                alt='placeholder image'
+                                src={`images/${image}`}
+                                alt={name}
                                 borderRadius='lg'
                             />
                             <Stack mt='6' spacing='3'>
-                                <Heading size='md'>{item.name}</Heading>
+                                <Heading size='md'>{name}</Heading>
                                 <Text>
-                                    {item.description}
+                                    {description}
                                 </Text>
                                 <Text color='blue.600' fontSize='2xl'>
-                                    ${item.price}
+                                    ${price}
+                                </Text>
+                                <Text color='blue.600' fontSize='2xl'>
+                                    {quantity} in stock
                                 </Text>
                             </Stack>
                         </CardBody>
