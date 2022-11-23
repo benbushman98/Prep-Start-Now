@@ -39,7 +39,7 @@ Prep Starts Now is an e-commerce site that uses queries and mutations for retrie
 ![PrepStartsNow](./client/public/images/screenshot.jpg)
 
 ## Deployed Link
-https://prep-starts-now.herokuapp.com/
+www.prepstartsnow.com
 
 ## Image Credits
 

@@ -8,7 +8,7 @@ import Electronics from './pages/Electronics';
 import FoodStorage from './pages/FoodStorage';
 import HouseEssentials from './pages/HouseEssentials';
 import AutoIndustrial from './pages/AutoIndustrial';
-import Promotions from './pages/HouseEssentials';
+import Promotions from './pages/Promotions';
 import HealthSafety from './pages/HealthSafety';
 import ResourceCenter from './pages/ResourceCenter';
 import Login from './pages/Login';
