@@ -35,6 +35,7 @@ export const QUERY_ALL_ITEMS = gql`
       category {
         name
       }
+      image
     }
   }
 `;
