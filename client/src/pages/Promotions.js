@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Purchases = () => {
+const Promotions = () => {
     return (
         <div>
-            Purchases
+            Promotions
         </div>
     )
 }
 
-export default Purchases;
+export default Promotions;
