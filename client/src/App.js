@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Home from './pages/Home';
+import FeaturedBrands from './pages/FeaturedBrands';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';

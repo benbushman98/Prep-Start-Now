@@ -21,6 +21,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "framer-motion": "^6.5.1",
+    "react-router-dom": "^6.4.3",
     "react-scroll": "^1.8.8"
   }
 }
