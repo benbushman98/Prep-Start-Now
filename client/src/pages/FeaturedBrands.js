@@ -3,12 +3,9 @@ import { useQuery } from '@apollo/client';
 import DisplayCard from '../components/Card';
 import { QUERY_FEATURED_BRANDS } from '../utils/queries';
 
-
-
 const FeaturedBrands = () => {
-    const { loading, data } = useQuery(QUERY_FEATURED_BRANDS);
+    const { data } = useQuery(QUERY_FEATURED_BRANDS);
     const items = data?.items || [];
-
 
     return (
         <div>
