@@ -5,14 +5,16 @@ function DisplayCard(props) {
 
     return (
         <div>
-            <Wrap spacing='20px'>
+            <Wrap spacing='20px' justify={'center'}>
                 {props.items.map(item => (
-                    <Card maxW='sm' minW='sm' align="center">
+                    <Card maxW='sm' minW='sm' align="center" bg="white"  opacity= "0.9">
                         <CardBody>
                             <Image
                                 src={`images/${item.image}`}
                                 alt={item.name}
                                 borderRadius='lg'
+                                height={'200px'}
+
                             />
                             <Stack mt='6' spacing='3'>
                                 <Heading size='md'>{item.name}</Heading>
