@@ -25,7 +25,7 @@ export default function PageChangeHandler() {
       return <Home />;
     }
     if (currentPage === 'Featured Brands') {
-      return <FeaturedBrands />;
+      return <FeaturedBrands path="/featuredbrands"/>;
     }
     if (currentPage === 'Electronics') {
       return <Electronics />;
