@@ -57,7 +57,7 @@ db.once('open', async () => {
       name: 'Freeze Dried Meals',
       description:
         'Breakfast, lunch, and dinner freeze dried meal packets',
-      image: 'food.png',
+      image: 'food.avif',
       category: categories[4]._id,
       price: 149.99,
       quantity: 50 
