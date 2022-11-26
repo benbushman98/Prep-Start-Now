@@ -37,10 +37,10 @@ const Signup = () => {
         <Stack spacing={3} mx={20} p={5} backgroundColor='#FFF'>
             <Text fontSize={30} fontWeight="bold">SIGNUP</Text>
             <form onSubmit={handleFormSubmit}>
-            <Input placeholder='First Name' size='md' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-            <Input mt={3} placeholder='Last Name' size='md' value={lastName} onChange={(e) => setLastName(e.target.value)}/>
-            <Input mt={3} placeholder='Email' size='md' value={email} onChange={(e) => setEmail(e.target.value)} />
-            <Input mt={3} placeholder='Password' size='md' value={password} onChange={(e) => setPassword(e.target.value)} />
+            <Input type="name" placeholder='First Name' size='md' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+            <Input mt={3} type="name" placeholder='Last Name' size='md' value={lastName} onChange={(e) => setLastName(e.target.value)}/>
+            <Input mt={3} type="email" placeholder='Email' size='md' value={email} onChange={(e) => setEmail(e.target.value)} />
+            <Input mt={3} type="password" placeholder='Password' size='md' value={password} onChange={(e) => setPassword(e.target.value)} />
             <Button colorScheme='blue' mt={3}>Sign-up</Button>
             </form>
         </Stack>
