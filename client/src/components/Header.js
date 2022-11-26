@@ -8,11 +8,19 @@
 import { Flex, HStack, Center, ButtonGroup, chakra } from '@chakra-ui/react';
 import { Link } from '@chakra-ui/react'
 import React from "react";
+import auth from '../utils/auth';
 import MobileDrawer from './MobileDrawer';
 
 
 const Header = ({ currentPage, handlePageChange }) => {
+  const token = localStorage.getItem('id_token')
+ function handleLogOut (e) {
+ e.preventDefault()
+ auth.logout()
+ } 
+
   return (
+    
     <chakra.header id="header">
       <Center color={'#FFB900'} fontSize={'6xl'} as='b' align={'center'}>
         PREP STARTS NOW
@@ -66,14 +74,21 @@ const Header = ({ currentPage, handlePageChange }) => {
               <Link color='#D3D3D3' to="/ResourceCenter" onClick={() => handlePageChange('ResourceCenter')}>
                 Rescource Center
               </Link>
-
-              <Link color='#D3D3D3' to="/Login" onClick={() => handlePageChange('Login')}>
+              {token ? ( 
+                <Link color='#D3D3D3' onClick={handleLogOut}>Log Out</Link>
+              ) : (
+                <>
+                <Link color='#D3D3D3' to="/Login" onClick={() => handlePageChange('Login')}>
                 Login
               </Link>
 
               <Link color='#D3D3D3' to="/Signup" onClick={() => handlePageChange('Signup')}>
                 Signup
               </Link>
+              </>
+              )}
+              
+             
 
               <Link color='#D3D3D3' to="/Cart" onClick={() => handlePageChange('Cart')}>
                 Cart
