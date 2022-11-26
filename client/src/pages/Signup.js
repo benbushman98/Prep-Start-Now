@@ -31,7 +31,7 @@ const Signup = () => {
   };
 
  
-//SETS THE DATA USER PROVIDED FOR EACH INPUT FIELDS
+//CAPTURES THE DATA PROVIDED BY THE USER FOR EACH INPUT FIELDS
     return (
         <Stack spacing={3} backgroundColor='#FFF'>
             <Text>Signup</Text>

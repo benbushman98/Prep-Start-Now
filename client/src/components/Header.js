@@ -72,7 +72,7 @@ const Header = ({ currentPage, handlePageChange }) => {
               </Link>
 
               <Link color='#D3D3D3' to="/ResourceCenter" onClick={() => handlePageChange('ResourceCenter')}>
-                Rescource Center
+                Resource Center
               </Link>
               {token ? ( 
                 <Link color='#D3D3D3' onClick={handleLogOut}>Log Out</Link>

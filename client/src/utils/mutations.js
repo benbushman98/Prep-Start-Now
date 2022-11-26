@@ -21,3 +21,15 @@ export const ADD_CUSTOMER = gql`
     }
   }
 `;
+
+//SETS UP THE MUTATION TO LOG IN
+export const LOGIN = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      customer {
+        _id
+      }
+    }
+  }
+`;
