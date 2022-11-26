@@ -6,7 +6,7 @@ class AuthService {
   }
 
   loggedIn() {
-    // Checks if there is a saved token and it's still valid
+    // WHEN LOGGED IN, THIS CHECKS IF A TOKEN EXISTS AND IF IT HAS NOT EXPIRED
     const token = this.getToken();
     return !!token && !this.isTokenExpired(token);
   }
@@ -23,21 +23,21 @@ class AuthService {
   }
 
   getToken() {
-    // Retrieves the user token from localStorage
+    // THIS GETS THE TOKEN STORED IN LOCAL STORAGE 
     return localStorage.getItem('id_token');
   }
 
   login(idToken) {
-    // Saves user token to localStorage
+    // THIS ALLOWS THE TOKEN TO BE STORED IN LOCAL STORAGE AND SENDS AN ALERT MESSAGE TO CONFIRM USER IS SIGNED IN
     localStorage.setItem('id_token', idToken);
     window.location.assign('/');
     alert('You successfully signed in!')
   }
 
   logout() {
-    // Clear user token and profile data from localStorage
+    // REMOVES TOKEN AND CUSTOMER PROFILE DATA FROM LOCAL STORAGE
     localStorage.removeItem('id_token');
-    // this will reload the page and reset the state of the application
+    // RELOADS THE PAGE AND RESETS THE STATE OF THE WEBSITE
     window.location.assign('/');
   }
 }
