@@ -6,7 +6,7 @@ class AuthService {
   }
 
   loggedIn() {
-    // WHEN LOGGED IN CHECKS IF A TOKEN EXISTS AND IF IT HAS NOT EXPIRED
+    // WHEN LOGGED IN, THIS CHECKS IF A TOKEN EXISTS AND IF IT HAS NOT EXPIRED
     const token = this.getToken();
     return !!token && !this.isTokenExpired(token);
   }
@@ -23,12 +23,12 @@ class AuthService {
   }
 
   getToken() {
-    // IT GETS THE TOKEN STORED IN LOCAL STORAGE 
+    // THIS GETS THE TOKEN STORED IN LOCAL STORAGE 
     return localStorage.getItem('id_token');
   }
 
   login(idToken) {
-    // ALLOWS THE TOKEN TO BE STORED IN LOCAL STORAGE AND SENDS AN ALERT MESSAGE TO CONFIRM USER IS SIGNED IN
+    // THIS ALLOWS THE TOKEN TO BE STORED IN LOCAL STORAGE AND SENDS AN ALERT MESSAGE TO CONFIRM USER IS SIGNED IN
     localStorage.setItem('id_token', idToken);
     window.location.assign('/');
     alert('You successfully signed in!')

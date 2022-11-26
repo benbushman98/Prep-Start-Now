@@ -5,13 +5,13 @@ import { ADD_CUSTOMER } from '../utils/mutations';
 import auth from '../utils/auth';
 
 const Signup = () => {
-    //SETTING UP THE STATES FOR THE INPUTS(EMAIL, FN, LN AND PASSWORD)
+    //THIS SETS UP THE STATES FOR THE INPUTS(EMAIL, FN, LN AND PASSWORD)
     const [email, setEmail] = useState('')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [password, setPassword] = useState('')
 
-    //USE MUTATION TO ADD CUSTOMER
+    //USES MUTATION TO ADD CUSTOMER
   const [addCustomer] = useMutation(ADD_CUSTOMER);
 
   //SETS UP THE FORM FUNCTIONALITY
