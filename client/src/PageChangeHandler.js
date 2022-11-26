@@ -8,7 +8,7 @@ import Electronics from './pages/Electronics';
 import FoodStorage from './pages/FoodStorage';
 import HouseEssentials from './pages/HouseEssentials';
 import AutoIndustrial from './pages/AutoIndustrial';
-import Promotions from './pages/Promotions';
+import Promotions from './pages/HouseEssentials';
 import HealthSafety from './pages/HealthSafety';
 import ResourceCenter from './pages/ResourceCenter';
 import Login from './pages/Login';
@@ -25,7 +25,7 @@ export default function PageChangeHandler() {
       return <Home />;
     }
     if (currentPage === 'Featured Brands') {
-      return <FeaturedBrands path="/featuredbrands"/>;
+      return <FeaturedBrands />;
     }
     if (currentPage === 'Electronics') {
       return <Electronics />;

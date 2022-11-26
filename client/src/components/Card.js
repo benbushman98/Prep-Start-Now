@@ -7,7 +7,7 @@ function DisplayCard(props) {
         <div>
             <Wrap spacing='20px' justify={'center'}>
                 {props.items.map(item => (
-                    <Card maxW='sm' minW='sm' align="center" bg="white"  opacity= "0.9">
+                    <Card key={item._id} maxW='sm' minW='sm' align="center" bg="white"  opacity= "0.9">
                         <CardBody>
                             <Image
                                 src={`images/${item.image}`}
