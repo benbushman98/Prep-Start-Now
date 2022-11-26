@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, Stack, Input } from '@chakra-ui/react';
+import { Button, Text, Stack, Input } from '@chakra-ui/react'
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
 import auth from '../utils/auth';
@@ -29,12 +29,12 @@ const Login = () => {
   
 //CAPTURES THE DATA PROVIDED BY THE USER FOR EACH INPUT FIELDS
   return (
-    <Stack spacing={3} backgroundColor="#FFF">
-      <Text>Login</Text>
+    <Stack spacing={3} mx={20} p={5} backgroundColor="#FFF">
+      <Text fontSize={30} fontWeight="bold">LOGIN</Text>
       <form onSubmit={handleFormSubmit}>
       <Input placeholder="Email" size="md" value={email} onChange={(e) => setEmail(e.target.value)}/>
-      <Input placeholder="Password" size="md" value={password} onChange={(e) => setPassword(e.target.value)}/>
-      <button>Log In</button>
+      <Input mt={3} placeholder="Password" size="md" value={password} onChange={(e) => setPassword(e.target.value)}/>
+      <Button mt={3} colorScheme='blue'>Log-in</Button>
       </form>
     </Stack>
   );
