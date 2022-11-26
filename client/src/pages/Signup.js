@@ -5,7 +5,7 @@ import { ADD_CUSTOMER } from '../utils/mutations';
 import auth from '../utils/auth';
 
 const Signup = () => {
-    //THIS SETS UP THE STATES FOR THE INPUTS(EMAIL, FN, LN AND PASSWORD)
+    //THIS SETS UP THE STATES FOR THE INPUTS(EMAIL, FNAME, LNAME AND PASSWORD)
     const [email, setEmail] = useState('')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')

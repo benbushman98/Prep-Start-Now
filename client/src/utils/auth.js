@@ -35,9 +35,9 @@ class AuthService {
   }
 
   logout() {
-    // REMOVES TOKEN AND CUSTOMER PROFILE DATA FROM LOCAL STORAGE
+    // REMOVES TOKEN AND CUSTOMER PROFILE'S DATA FROM LOCAL STORAGE
     localStorage.removeItem('id_token');
-    // RELOADS THE PAGE AND RESETS THE STATE OF THE WEBSITE
+    // RELOADS THE PAGE AND RESETS THE STATE OF THE APPLICATION
     window.location.assign('/');
   }
 }

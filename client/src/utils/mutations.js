@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
 
+//SETS UP THE MUTATION TO ADD A CUSTOMER
 export const ADD_CUSTOMER = gql`
   mutation addCustomer(
     $firstName: String!
