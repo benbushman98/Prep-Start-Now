@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
-import { Button, Text, Stack, Input } from '@chakra-ui/react'
+import { Text, Stack, Input } from '@chakra-ui/react'
 import { useMutation } from '@apollo/client';
 import { ADD_CUSTOMER } from '../utils/mutations';
 import auth from '../utils/auth';
 
 const Signup = () => {
+
+  const styles = {
+    button: {
+        background: 'rgb(44,116,185)',
+        borderRadius: 6,
+        padding: '8px',
+        color: 'white',
+        marginTop: '10px',
+        fontWeight: '500'
+    }
+  }
 
   //THIS SETS UP THE STATES FOR THE INPUTS(EMAIL, FNAME, LNAME AND PASSWORD)
   const [email, setEmail] = useState('')
@@ -41,7 +52,7 @@ const Signup = () => {
             <Input mt={3} type="name" placeholder='Last Name' size='md' value={lastName} onChange={(e) => setLastName(e.target.value)}/>
             <Input mt={3} type="email" placeholder='Email' size='md' value={email} onChange={(e) => setEmail(e.target.value)} />
             <Input mt={3} type="password" placeholder='Password' size='md' value={password} onChange={(e) => setPassword(e.target.value)} />
-            <Button colorScheme='blue' mt={3}>Sign-up</Button>
+            <button style={styles.button}>Sign-up</button>
             </form>
         </Stack>
     )
