@@ -100,7 +100,7 @@ const Header = ({ currentPage, handlePageChange }) => {
                   <Link color='#D3D3D3' to="/Cart" onClick={() => handlePageChange('Cart')}>
                     <Image
                       src='/images/cart.png'
-                      width={'50px'}
+                      width={'30px'}
                       alt="shopping cart icon"
                     />
                   </Link>
