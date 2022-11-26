@@ -13,7 +13,8 @@ function DisplayCard(props) {
                                 src={`images/${item.image}`}
                                 alt={item.name}
                                 borderRadius='lg'
-                                height={'200px'}
+                                height={'300px'}
+                                width={'100%'}
 
                             />
                             <Stack mt='6' spacing='3'>
