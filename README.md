@@ -7,7 +7,6 @@ Prep Starts Now is an e-commerce site that uses queries and mutations for retrie
 
 `As a user, I want to shop for emergency preparedness essentials.`<br />
 `When I am shopping, I can view all items, prices, and the amount in stock.`<br />
-`When I click on an item, I can view the item description and price.`<br />
 `When I click 'Add to cart' on an item, the item is sent to my cart.`<br />
 `When I click on the cart icon, I can edit the item quantity or delete an item.`<br />
 `When I am done shopping, I will need to log-in or sign-up on order to check-out.`<br />
