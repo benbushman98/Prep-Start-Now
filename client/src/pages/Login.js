@@ -32,8 +32,8 @@ const Login = () => {
     <Stack spacing={3} mx={20} p={5} backgroundColor="#FFF">
       <Text fontSize={30} fontWeight="bold">LOGIN</Text>
       <form onSubmit={handleFormSubmit}>
-      <Input placeholder="Email" size="md" value={email} onChange={(e) => setEmail(e.target.value)}/>
-      <Input mt={3} placeholder="Password" size="md" value={password} onChange={(e) => setPassword(e.target.value)}/>
+      <Input placeholder="Email" type={"email"} size="md" value={email} onChange={(e) => setEmail(e.target.value)}/>
+      <Input mt={3} type="password" placeholder="Password" size="md" value={password} onChange={(e) => setPassword(e.target.value)}/>
       <Button mt={3} colorScheme='blue'>Log-in</Button>
       </form>
     </Stack>
