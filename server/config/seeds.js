@@ -99,6 +99,15 @@ db.once('open', async () => {
       quantity: 25
     },
     {
+      name: 'Lighter',
+      description:
+        'Rechargeable plasma lighter',
+      image: 'lighter.png',
+      category: categories[3]._id,
+      price: 14.99,
+      quantity: 28
+    },
+    {
       name: 'Freeze Dried Meals',
       description:
         'Breakfast, lunch, and dinner freeze dried meal packets',
