@@ -8,7 +8,9 @@ import {
     Tbody,
     Tr,
     Th,
+    Tfoot,
     TableContainer,
+    Text
 } from '@chakra-ui/react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { useQuery } from '@apollo/client';
@@ -30,23 +32,28 @@ const Cart = () => {
         <ApolloProvider client={client}>
             <ChakraProvider>
                 <Stack>
+                    
                     <TableContainer backgroundColor={'#FFF'} spacing={3} mx={20} p={5}>
+                        <Text mb={5} fontSize={30} fontWeight="bold">Your Cart</Text>
                         <Table variant='simple'>
-                            <Thead fontSize={30} fontWeight="bold">Your Cart</Thead>
-                            <Thead mt={3}>
+                            <Thead>
                             <Tr>
                                 <Th>Item</Th>
                                 <Th>Price</Th>
                                 <Th>Quantity</Th>
-                                <Th></Th>
                             </Tr>
                             </Thead>
                             <Tbody>
                                 <CartRow items={items}/>
                             </Tbody>
+                            <Tfoot>
+                                <Th>TOTAL:</Th>
+                                <Th>$ _______</Th>
+                                <Th>____ items</Th>
+                            </Tfoot>
                         </Table>
                             {/* need to figure out how to link this button to the checkout page */}
-                            <Button mt={3} colorScheme='blue'>
+                            <Button mt={10} colorScheme='blue'>
                                 Check-out
                             </Button>
                     </TableContainer>
