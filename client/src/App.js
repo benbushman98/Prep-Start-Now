@@ -79,6 +79,7 @@ function App() {
               minHeight: "140vh",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              paddingBottom: "20px"
             }}>
    
               <Header currentPage={currentPage} handlePageChange={handlePageChange} />
