@@ -64,7 +64,7 @@ query Item($id: ID!) {
     price
     quantity
   }
-}`
+}`;
 
 
 
