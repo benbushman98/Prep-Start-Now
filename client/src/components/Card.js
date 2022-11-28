@@ -3,6 +3,11 @@ import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, Butto
 
 function DisplayCard(props) {
 
+    function sendToCart() {
+        // Add logic that sends the item to the cart
+        console.log("Send Item to Cart")
+    }
+    
     return (
         <div>
             <Wrap spacing='20px' justify={'center'}>
@@ -33,7 +38,7 @@ function DisplayCard(props) {
                         <Divider />
                         <CardFooter>
                             <ButtonGroup spacing='2'>
-                                <Button colorScheme='blue'>
+                                <Button colorScheme='blue' onClick={sendToCart}>
                                     Add to cart
                                 </Button>
                             </ButtonGroup>
