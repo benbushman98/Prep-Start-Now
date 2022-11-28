@@ -13,7 +13,7 @@ const DrawerTEST = ({
     onClose,
     btnRef,
     title = "Menu",
-    footer,
+    footer= "© Copyright 2022 - Prep Starts Now",
 }
 
 ) => {
@@ -27,12 +27,12 @@ const DrawerTEST = ({
             >
                 <DrawerOverlay />
                 <DrawerContent alignItems="center">
-                    <DrawerCloseButton alignSelf="end" mx={p} my={p} />
-                    <DrawerHeader my={p}>
-                        <Text as="p"> {title} </Text>
+                    <DrawerCloseButton color={'white'} alignSelf="end" mx={p} my={p} />
+                    <DrawerHeader w={'100%'} bg="black" color={"white"} >
+                        <Text as="p" fontSize={'2xl'}> {title} </Text>
                     </DrawerHeader>
-                    <DrawerBody>{children}</DrawerBody>
-                    <DrawerFooter>{footer}</DrawerFooter>
+                    <DrawerBody w={'100%'} bg="black">{children}</DrawerBody>
+                    <DrawerFooter w={'100%'} bg="black" color={'white'}>{footer}</DrawerFooter>
                 </DrawerContent>
             </Drawer>
         </Flex>

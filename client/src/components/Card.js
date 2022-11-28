@@ -12,14 +12,15 @@ function DisplayCard(props) {
         <div>
             <Wrap spacing='20px' justify={'center'}>
                 {props.items.map(item => (
-                    <Card key={item._id} maxW='sm' minW='sm' align="center" bg="white"  opacity= "0.9">
-                        <CardBody>
+                    <Card key={item._id} maxW='sm' minW='sm' align="center" bg="white"  opacity= "0.9" padding={'10px'}>
+                        <CardBody >
                             <Image
                                 src={`images/${item.image}`}
                                 alt={item.name}
                                 borderRadius='lg'
                                 height={'300px'}
                                 width={'100%'}
+                                
 
                             />
                             <Stack mt='6' spacing='3'>
