@@ -48,4 +48,20 @@ export const QUERY_CART = gql`
     }
   }
 `;
-// FIX THIS TO ONLY QUERY A SINGLE ITEM WHEN 'ADD TO CART' IS CLICKED
+
+//^^ FIX THIS TO ONLY QUERY A SINGLE ITEM WHEN 'ADD TO CART' IS CLICKED, PULLING EVERYTHING FOR NOW
+
+// export const QUERY_ITEM = gql`
+//   {
+//     item(_id: $id) {
+//       name
+//       price
+//       quantity
+//     }
+//   }
+// `;
+
+//^^ SINGLE ITEM BY ID
+
+
+

@@ -6,10 +6,6 @@ const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
-// This is a public sample test API key.
-// Sign in to see your own test API key embedded in code samples.
-const stripe = require("stripe")('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
-
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
@@ -36,7 +32,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-
 //APOLLO SERVER START FUNCTION
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
@@ -50,4 +45,4 @@ const startApolloServer = async (typeDefs, resolvers) => {
   })
   };
   
-  startApolloServer(typeDefs, resolvers);
+startApolloServer(typeDefs, resolvers);

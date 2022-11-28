@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { useQuery } from '@apollo/client';
-import { QUERY_CART } from '../utils/queries';
+import { QUERY_CART } from '../utils/queries'; //this query needs to be updated or done away with, just pulls everything now
 import CartRow from '../components/CartRow';
 
 
@@ -27,6 +27,16 @@ const Cart = () => {
     const { data } = useQuery(QUERY_CART);
     // FIX THIS TO ONLY QUERY WHEN 'ADD TO CART' IS CLICKED^^
     const items = data?.items || [];
+
+    function getTotalPrice() {
+        // Add total $ logic 
+        console.log("Total Price")
+    }
+
+    function getTotalQuantity() {
+        // Add total items logic
+        console.log("Total Quantity")
+    }
 
     return (
         <ApolloProvider client={client}>
@@ -41,6 +51,7 @@ const Cart = () => {
                                 <Th>Item</Th>
                                 <Th>Price</Th>
                                 <Th>Quantity</Th>
+                                <Th></Th>
                             </Tr>
                             </Thead>
                             <Tbody>
@@ -48,8 +59,9 @@ const Cart = () => {
                             </Tbody>
                             <Tfoot>
                                 <Th>TOTAL:</Th>
-                                <Th>$ _______</Th>
-                                <Th>____ items</Th>
+                                <Th>${getTotalPrice()}</Th>
+                                <Th>{getTotalQuantity()} items</Th>
+                                <Th></Th>
                             </Tfoot>
                         </Table>
                             {/* need to figure out how to link this button to the checkout page */}
