@@ -15,7 +15,7 @@ const Header = ({ currentPage, handlePageChange }) => {
   return (
 
     <chakra.header id="header">
-      <Center color={'#FFB900'} fontSize={'6xl'} as='b' align={'center'}>
+      <Center color={'#FFB900'} fontSize={{base:'35px', sm: '50px', md: '50px', lg: '56px' }} as='b' align={'center'}>
         PREP STARTS NOW
       </Center>
       <Flex
@@ -112,8 +112,8 @@ const Header = ({ currentPage, handlePageChange }) => {
 
           </Flex>
         </HStack>
-        <HStack >
-          <MobileDrawer display={{ base: "none", md: "flex" }} />
+        <HStack  >
+          <MobileDrawer display={{ base: "none", md: "flex" }}  />
         </HStack>
 
       </Flex>

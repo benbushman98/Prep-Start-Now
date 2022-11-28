@@ -36,34 +36,34 @@ function App() {
       return <Electronics />;
     }
     if (currentPage === 'Food Storage') {
-        return <FoodStorage />;
+      return <FoodStorage />;
     }
     if (currentPage === 'House Essentials') {
-    return <HouseEssentials />;
+      return <HouseEssentials />;
     }
     if (currentPage === 'Auto Industrial') {
-    return <AutoIndustrial />;
+      return <AutoIndustrial />;
     }
     if (currentPage === 'Promotions') {
-    return <Promotions />;
+      return <Promotions />;
     }
     if (currentPage === 'Health & Safety') {
-    return <HealthSafety />;
+      return <HealthSafety />;
     }
     if (currentPage === 'Resource Center') {
-    return <ResourceCenter />;
+      return <ResourceCenter />;
     }
     if (currentPage === 'Login') {
-    return <Login />;
+      return <Login />;
     }
     if (currentPage === 'Signup') {
-    return <Signup />;
+      return <Signup />;
     }
     if (currentPage === 'Purchases') {
-    return <Purchases />;
+      return <Purchases />;
     }
     if (currentPage === 'Cart') {
-        return <Cart />;
+      return <Cart />;
     }
   };
 
@@ -73,21 +73,22 @@ function App() {
     <ApolloProvider client={client}>
       <ChakraProvider>
         <Box>
-            <div style={{
-              background: `url(./images/logoBigCrop.webp`,
-              backgroundSize: "cover",
-              minHeight: "140vh",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              paddingBottom: "20px"
-            }}>
-   
-              <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-              {renderPage()}
-            </div>
+          <div style={{
+            background: `url(./images/logoBigCrop.webp`,
+            backgroundSize: "cover",
+            minHeight: "140vh",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            paddingBottom: "20px",
+            padding: '20px'
+          }}>
+
+            <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+            {renderPage()}
+          </div>
         </Box>
         <Footer />
-    </ChakraProvider>
+      </ChakraProvider>
     </ApolloProvider>
   )
 }
