@@ -42,20 +42,20 @@ const Cart = () => {
         <ApolloProvider client={client}>
             <ChakraProvider>
                 <Stack>
-                    
+
                     <TableContainer backgroundColor={'#FFF'} spacing={3} mx={20} p={5}>
                         <Text mb={5} fontSize={30} fontWeight="bold">Your Cart</Text>
                         <Table variant='simple'>
                             <Thead>
-                            <Tr>
-                                <Th>Item</Th>
-                                <Th>Price</Th>
-                                <Th>Quantity</Th>
-                                <Th></Th>
-                            </Tr>
+                                <Tr>
+                                    <Th>Item</Th>
+                                    <Th>Price</Th>
+                                    <Th>Quantity</Th>
+                                    <Th></Th>
+                                </Tr>
                             </Thead>
                             <Tbody>
-                                <CartRow items={items}/>
+                                <CartRow items={items} />
                             </Tbody>
                             <Tfoot>
                                 <Th>TOTAL:</Th>
@@ -64,10 +64,10 @@ const Cart = () => {
                                 <Th></Th>
                             </Tfoot>
                         </Table>
-                            {/* need to figure out how to link this button to the checkout page */}
-                            <Button mt={10} colorScheme='blue'>
-                                Check-out
-                            </Button>
+                        {/* need to figure out how to link this button to the checkout page */}
+                        <Button mt={10} colorScheme='blue'>
+                            Check-out
+                        </Button>
                     </TableContainer>
                 </Stack>
             </ChakraProvider>
