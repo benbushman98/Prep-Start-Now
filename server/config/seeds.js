@@ -201,7 +201,7 @@ db.once('open', async () => {
       name: 'Water Filter',
       description:
         'Portable water filter for emergencies',
-      image: 'WaterFilter.png',
+      image: 'waterfilter.png',
       category: categories[8]._id,
       price: 49.99,
       quantity: 30
@@ -210,7 +210,7 @@ db.once('open', async () => {
       name: 'Multivitamin',
       description:
         'A multivitamin to take for immune system support',
-      image: 'Multivitamin.png',
+      image: 'multivitamin.png',
       category: categories[8]._id,
       price: 29.95,
       quantity: 30
@@ -219,7 +219,7 @@ db.once('open', async () => {
       name: 'Emergency Whistle',
       description:
         'A loud whistle people can hear up to a mile away',
-      image: 'Whistle.png',
+      image: 'whistle.png',
       category: categories[8]._id,
       price: 9.99,
       quantity: 25
