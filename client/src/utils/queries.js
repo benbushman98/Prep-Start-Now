@@ -49,6 +49,25 @@ export const QUERY_CART = gql`
   }
 `;
 
+//FIXED QUERY (ITEM BY ID)
+export const QUERY_ITEM =gql`
+query Item($id: ID!) {
+  item(_id: $id) {
+    _id
+    category {
+      _id
+      name
+    }
+    description
+    image
+    name
+    price
+    quantity
+  }
+}`;
+
+
+
 //^^ FIX THIS TO ONLY QUERY A SINGLE ITEM WHEN 'ADD TO CART' IS CLICKED, PULLING EVERYTHING FOR NOW
 
 // export const QUERY_ITEM = gql`
