@@ -7,22 +7,29 @@ function DisplayCard(props) {
         // Add logic that sends the item to the cart
         console.log("Send Item to Cart")
     }
-    
+
     return (
         <div>
             <Wrap spacing='20px' justify={'center'}>
                 {props.items.map(item => (
+
                     <Card key={item._id} maxW='sm' minW='sm' align="center" bg="white"  opacity= "0.9" padding={'10px'}>
                         <CardBody >
+
                             <Image
                                 src={`images/${item.image}`}
                                 alt={item.name}
                                 borderRadius='lg'
                                 height={'300px'}
-                                width={'100%'}
-                                
 
-                            />
+                                width={'auto'}
+                                justify={'center'}
+                                align="center"
+                                display="block"
+                                marginLeft="auto"
+                                marginRight="auto"
+
+              />
                             <Stack mt='6' spacing='3'>
                                 <Heading size='md'>{item.name}</Heading>
                                 <Text>
