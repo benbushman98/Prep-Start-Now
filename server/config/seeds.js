@@ -166,7 +166,7 @@ db.once('open', async () => {
       description:
         'Double and triple A battery pack for emergencies',
       image: 'batteries.png',
-      category: categories[4]._id,
+      category: categories[1]._id,
       price: 33.98,
       quantity: 48 
     },

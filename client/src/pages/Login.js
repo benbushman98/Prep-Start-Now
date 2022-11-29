@@ -3,6 +3,14 @@ import { Text, Stack, Input } from '@chakra-ui/react'
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
 import auth from '../utils/auth';
+import {
+  Modal,
+  ModalContent,
+  ModalBody,
+  useDisclosure,
+  Center,
+  ModalCloseButton
+} from '@chakra-ui/react'
 
 
 const Login = () => {
@@ -17,6 +25,8 @@ const Login = () => {
             fontWeight: '500'
         }
     }
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
     //THIS SETS UP THE STATES FOR THE INPUTS(EMAIL AND PASSWORD)
     const [email, setEmail] = useState('');
@@ -44,9 +54,19 @@ const Login = () => {
     <Stack spacing={3} mx={20} p={5} backgroundColor="#FFF">
       <Text fontSize={30} fontWeight="bold">LOGIN</Text>
       <form onSubmit={handleFormSubmit}>
-      <Input placeholder="Email" type={"email"} size="md" value={email} onChange={(e) => setEmail(e.target.value)}/>
-      <Input mt={3} type="password" placeholder="Password" size="md" value={password} onChange={(e) => setPassword(e.target.value)}/>
-      <button style={styles.button}>Log-in</button>
+        <Input placeholder="Email" type={"email"} size="md" value={email} onChange={(e) => setEmail(e.target.value)}/>
+        <Input mt={3} type="password" placeholder="Password" size="md" value={password} onChange={(e) => setPassword(e.target.value)}/>
+        <button style={styles.button} onClick={onOpen}>Log-in</button>
+          <Modal isOpen={isOpen} onClose={onClose}>                   
+            <ModalContent>
+                <ModalBody p={5}>
+                    <ModalCloseButton />
+                    <Center>
+                        Success!
+                    </Center>
+                </ModalBody>
+            </ModalContent>
+          </Modal>
       </form>
     </Stack>
   );

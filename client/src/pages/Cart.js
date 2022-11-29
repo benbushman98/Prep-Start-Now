@@ -12,10 +12,12 @@ import {
     Tfoot,
     TableContainer,
     Text,
+    // centerContent,
+    // Container
 } from '@chakra-ui/react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { useQuery } from '@apollo/client';
-import { QUERY_CART } from '../utils/queries'; //this query needs to be updated or done away with, just pulls everything for now
+import { QUERY_FOODSTORAGE } from '../utils/queries'; //this query needs to be updated or done away with, just pulls Food Storage for now
 import CartRow from '../components/CartRow';
 
 
@@ -25,31 +27,31 @@ const client = new ApolloClient({
 });
 
 const Cart = () => {
-    const { data } = useQuery(QUERY_CART);
+    const { data } = useQuery(QUERY_FOODSTORAGE);
     // FIX THIS TO ONLY QUERY WHEN 'ADD TO CART' IS CLICKED^^
     const items = data?.items || [];
 
     function getTotalPrice() {
         // Add total $ logic 
-        console.log("Total Price");
         return (
-            5186.61
+            299.98
         )
     }
 
     function getTotalQuantity() {
         // Add total items logic
-        console.log("Total Quantity")
         return (
-            22
+            2
         )
     }
 
     return (
         <ApolloProvider client={client}>
             <ChakraProvider>
+                {/* <Container centerContent> */}
                 <Stack>
-                    <TableContainer backgroundColor={'#FFF'} spacing={3} mx={20} p={5}>
+                    <TableContainer backgroundColor={'#FFF'} p={5} mx={"5%"}>
+                    {/* minWidth={'520px'} */}
                         <Text mb={5} fontSize={30} fontWeight="bold">Your Cart</Text>
                         <Table variant='simple'>
                             <Thead>
@@ -79,6 +81,7 @@ const Cart = () => {
                         </Button>
                     </TableContainer>
                 </Stack>
+                {/* </Container> */}
             </ChakraProvider>
         </ApolloProvider>
     )

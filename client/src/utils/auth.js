@@ -31,7 +31,7 @@ class AuthService {
     // THIS ALLOWS THE TOKEN TO BE STORED IN LOCAL STORAGE AND SENDS AN ALERT MESSAGE TO CONFIRM USER IS SIGNED IN
     localStorage.setItem('id_token', idToken);
     window.location.assign('/');
-    alert('You successfully signed in!')
+    // alert('You successfully signed in!')
   }
 
   logout() {

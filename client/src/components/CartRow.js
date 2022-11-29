@@ -6,11 +6,11 @@ function CartRow (props) {
         <>
         {props.items.map(item => (
         <Tr key={item._id}>
-            <Td>{item.name}</Td>
-            <Td>${item.price}</Td>
-            <Td><Input placeholder='1' size='xs' w='10%'/></Td>
+            <Td fontSize={{ base: "10px", md: "12px", lg: "16px" }}>{item.name}</Td>
+            <Td fontSize={{ base: "10px", md: "12px", lg: "16px" }}>${item.price}</Td>
+            <Td><Input placeholder='1' size='xs' w='10%' minWidth={'25px'} /></Td>
             {/* need to figure out how to edit quantity^^ */}
-            <Td><Button colorScheme='blue'>Delete</Button></Td>
+            <Td fontSize={{ base: "10px", md: "12px", lg: "16px" }}><Button colorScheme='blue'>Delete</Button></Td>
             {/* need to get delete button functional^^ */}
         </Tr>
         ))}
