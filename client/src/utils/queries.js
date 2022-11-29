@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const QUERY_FEATURED_BRANDS = gql`
  {
-    items(category: "6384f5d343d84c3fdfb92de7"){
+    items(category: "638580ad2dd4017e18aac223"){
       _id
       name
       description
@@ -18,7 +18,7 @@ export const QUERY_FEATURED_BRANDS = gql`
 
 export const QUERY_ELECTRONICS = gql`
  {
-    items(category: "6384f5d343d84c3fdfb92de8"){
+    items(category: "638580ad2dd4017e18aac224"){
       _id
       name
       description
@@ -34,7 +34,7 @@ export const QUERY_ELECTRONICS = gql`
 
 export const QUERY_FOODSTORAGE = gql`
  {
-    items(category: "6384f5d343d84c3fdfb92deb"){
+    items(category: "638580ad2dd4017e18aac227"){
       _id
       name
       description
@@ -50,7 +50,7 @@ export const QUERY_FOODSTORAGE = gql`
 
 export const QUERY_HEALTH_AND_SAFETY = gql`
  {
-    items(category: "6384f5d343d84c3fdfb92def"){
+    items(category: "638580ad2dd4017e18aac22b"){
       _id
       name
       description
@@ -66,7 +66,7 @@ export const QUERY_HEALTH_AND_SAFETY = gql`
 
 export const QUERY_AUTO_INDUSTRIAL = gql`
 {
-   items(category: "6384f5d343d84c3fdfb92ded"){
+   items(category: "638580ad2dd4017e18aac229"){
      _id
      name
      description
@@ -82,7 +82,7 @@ export const QUERY_AUTO_INDUSTRIAL = gql`
 
 export const QUERY_HOUSEHOLD_ESSENTIALS = gql`
 {
-   items(category: "6384f5d343d84c3fdfb92dec"){
+   items(category: "638580ad2dd4017e18aac228"){
      _id
      name
      description
@@ -98,7 +98,7 @@ export const QUERY_HOUSEHOLD_ESSENTIALS = gql`
 
 export const QUERY_CLOTHING_SHOES_ACCESSORIES = gql`
 {
-   items(category: "6384f5d343d84c3fdfb92de9"){
+   items(category: "638580ad2dd4017e18aac225"){
      _id
      name
      description
@@ -114,7 +114,7 @@ export const QUERY_CLOTHING_SHOES_ACCESSORIES = gql`
 
 export const QUERY_PROMOTIONS = gql`
 {
-   items(category: "6384f5d343d84c3fdfb92dee"){
+   items(category: "638580ad2dd4017e18aac22a"){
      _id
      name
      description
@@ -130,7 +130,7 @@ export const QUERY_PROMOTIONS = gql`
 
 export const QUERY_EMERGENCY_PREP = gql`
 {
-   items(category: "6384f5d343d84c3fdfb92dea"){
+   items(category: "638580ad2dd4017e18aac226"){
      _id
      name
      description
