@@ -144,6 +144,7 @@ export const QUERY_EMERGENCY_PREP = gql`
  }
 `;
 
+
 export const QUERY_ALL_ITEMS = gql`
   {
     items {
@@ -159,7 +160,6 @@ export const QUERY_ALL_ITEMS = gql`
     }
   }
 `;
-
 
 
 
@@ -179,19 +179,27 @@ export const QUERY_CART = gql`
   }
 `;
 
-//^^ FIX THIS TO ONLY QUERY A SINGLE ITEM WHEN 'ADD TO CART' IS CLICKED, PULLING EVERYTHING FOR NOW
+//FIXED QUERY (ITEM BY ID)
+export const QUERY_ITEM =gql`
+query Item($id: ID!) {
+  item(_id: $id) {
+    _id
+    category {
+      _id
+      name
+    }
+    description
+    image
+    name
+    price
+    quantity
+  }
+}`;
 
-// export const QUERY_ITEM = gql`
-//   {
-//     item(_id: $id) {
-//       name
-//       price
-//       quantity
-//     }
-//   }
-// `;
 
-//^^ SINGLE ITEM BY ID
+
+
+
 
 
 

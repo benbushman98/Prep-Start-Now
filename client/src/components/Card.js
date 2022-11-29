@@ -3,17 +3,33 @@ import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, Butto
 
 function DisplayCard(props) {
 
+    function sendToCart() {
+        // Add logic that sends the item to the cart
+        console.log("Send Item to Cart")
+    }
+
     return (
         <div>
-            <Wrap spacing='20px'>
+            <Wrap spacing='20px' justify={'center'}>
                 {props.items.map(item => (
-                    <Card maxW='sm' minW='sm' align="center">
-                        <CardBody>
+
+                    <Card key={item._id} maxW='sm' minW='sm' align="center" bg="white"  opacity= "0.9" padding={'10px'}>
+                        <CardBody >
+
                             <Image
                                 src={`images/${item.image}`}
                                 alt={item.name}
                                 borderRadius='lg'
-                            />
+                                height={'300px'}
+
+                                width={'auto'}
+                                justify={'center'}
+                                align="center"
+                                display="block"
+                                marginLeft="auto"
+                                marginRight="auto"
+
+              />
                             <Stack mt='6' spacing='3'>
                                 <Heading size='md'>{item.name}</Heading>
                                 <Text>
@@ -30,10 +46,7 @@ function DisplayCard(props) {
                         <Divider />
                         <CardFooter>
                             <ButtonGroup spacing='2'>
-                                <Button variant='solid' colorScheme='blue'>
-                                    Buy now
-                                </Button>
-                                <Button variant='ghost' colorScheme='blue'>
+                                <Button colorScheme='blue' onClick={sendToCart}>
                                     Add to cart
                                 </Button>
                             </ButtonGroup>

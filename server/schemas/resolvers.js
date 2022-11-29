@@ -14,7 +14,7 @@ const resolvers = {
       return await Category.find();
     },
     //RETURNS ITEMS BELONGING TO A CATEGORY
-    items: async (parent, { category, name }) => {
+    items: async (parent, { name, category }) => {
       const params = {};
 
       if (category) {
