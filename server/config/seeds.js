@@ -36,6 +36,15 @@ db.once('open', async () => {
       quantity: 20
     },
     {
+      name: 'Camping Cot',
+      description:
+        'This camping cot is easy to set up as well as comfortable to make your sleeping experience as good as possible',
+      image: 'campingcot.webp',
+      category: categories[0]._id,
+      price: 189.99,
+      quantity: 20
+    },
+    {
       name: 'Walkie-talkie',
       description:
         '20 mile indoor and outdoor range',
@@ -52,6 +61,15 @@ db.once('open', async () => {
       category: categories[1]._id,
       price: 45.99,
       quantity: 20
+    },
+    {
+      name: 'Petzl headlight',
+      description:
+        'A reliable headlight you can use in any activity',
+      image: 'headlight.png',
+      category: categories[1]._id,
+      price: 69.95,
+      quantity: 40
     },
     {
       name: 'Portable Battery Pack',
@@ -79,6 +97,24 @@ db.once('open', async () => {
       category: categories[2]._id,
       price: 119.95,
       quantity: 20
+    },
+    {
+      name: 'Beanie',
+      description:
+        'High quality winter hat',
+      image: 'beanie.png',
+      category: categories[2]._id,
+      price: 11.99,
+      quantity: 20
+    },
+    {
+      name: 'Winter Gloves',
+      description:
+        'Thermal Winter Gloves for Men, Women',
+      image: 'wintergloves.png',
+      category: categories[2]._id,
+      price: 25.99,
+      quantity: 28
     },
     {
       name: 'Rain Pancho',
@@ -144,6 +180,15 @@ db.once('open', async () => {
       quantity: 20
     },
     {
+      name: 'Luggable Loo',
+      description:
+        'A portable toilet for many outdoor activities and disaster emergencies',
+      image: 'portabletoilet.webp',
+      category: categories[5]._id,
+      price: 55.00,
+      quantity: 35
+    },
+    {
       name: 'Gas Generator',
       description:
         'A gas powered generator that has 14 hours of runtime',
@@ -160,6 +205,15 @@ db.once('open', async () => {
       category: categories[5]._id,
       price: 3599.00,
       quantity: 20
+    },
+    {
+      name: 'Home Generator',
+      description:
+        'An in home generator you can charge with solar that can power big appliances ',
+      image: 'inhomegenerator.png',
+      category: categories[5]._id,
+      price: 2349.00,
+      quantity: 25
     },
     {
       name: 'Duct Tape',
@@ -218,7 +272,7 @@ db.once('open', async () => {
     {
       name: 'Emergency Whistle',
       description:
-        'A loud whistle people can hear up to a mile away',
+        'A loud whistle that can be heard up to a mile away',
       image: 'Whistle.png',
       category: categories[8]._id,
       price: 9.99,
