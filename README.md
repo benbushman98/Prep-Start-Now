@@ -1,15 +1,15 @@
 # Prep Starts Now
 
 ## Description
-Prep Starts Now is an e-commerce site that uses queries and mutations for retrieving, adding, updating, and deleting the products in the shopping cart. The site is responsive, interactive, and protects sensitive API key information on the server. The purpose of the site is to help provide individuals and families with the supplies they would need to prepare for an emergency. 
+“Prep Starts Now” is an application that provides the user a vast selection of high-quality items to complete their emergency preparedness process. When the user visits the home page, a navigation bar can be seen with the name of all categories that the items are classified on. On the home page, the user will see pictures of each item, description, price, and units in stock. The user can login or sign up, view items belonging to a certain category, or view the cart.
 
 ## User Story
 
 `As a user, I want to shop for emergency preparedness essentials.`<br />
 `When I view the website, I have the option to login or signup in the nav bar.`<br />
 `When I am on the home page, I can view all items, prices, and the amount in stock.`<br />
-`When I click 'Add to cart' on an item, the item is sent to my cart.`<br />
-`When I click on the cart icon, I can edit the item quantity or delete an item.`<br />
+`When I choose a category, I can view the items belonging to that category`<br />
+`On the cart page, I can view a list of items, an input box for the quantity, and a delete button.`<br />
 
 ## Technologies Used
 
