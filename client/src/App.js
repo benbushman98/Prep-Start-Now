@@ -5,11 +5,11 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import FeaturedBrands from './pages/FeaturedBrands';
 import Electronics from './pages/Electronics';
-import FoodStorage from './pages/FoodStorage';
-import HouseEssentials from './pages/HouseEssentials';
+import FoodStorage from './pages/FoodStorage72HrKits';
+import HouseEssentials from './pages/HouseHoldEssentials';
 import AutoIndustrial from './pages/AutoIndustrial';
 import Promotions from './pages/Promotions';
-import HealthSafety from './pages/HealthSafety';
+import HealthSafety from './pages/HealthAndSafety';
 import ResourceCenter from './pages/ResourceCenter';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -36,34 +36,34 @@ function App() {
       return <Electronics />;
     }
     if (currentPage === 'Food Storage') {
-        return <FoodStorage />;
+      return <FoodStorage />;
     }
     if (currentPage === 'House Essentials') {
-    return <HouseEssentials />;
+      return <HouseEssentials />;
     }
     if (currentPage === 'Auto Industrial') {
-    return <AutoIndustrial />;
+      return <AutoIndustrial />;
     }
     if (currentPage === 'Promotions') {
-    return <Promotions />;
+      return <Promotions />;
     }
     if (currentPage === 'Health & Safety') {
-    return <HealthSafety />;
+      return <HealthSafety />;
     }
     if (currentPage === 'Resource Center') {
-    return <ResourceCenter />;
+      return <ResourceCenter />;
     }
     if (currentPage === 'Login') {
-    return <Login />;
+      return <Login />;
     }
     if (currentPage === 'Signup') {
-    return <Signup />;
+      return <Signup />;
     }
     if (currentPage === 'Purchases') {
-    return <Purchases />;
+      return <Purchases />;
     }
     if (currentPage === 'Cart') {
-        return <Cart />;
+      return <Cart />;
     }
   };
 
@@ -73,20 +73,22 @@ function App() {
     <ApolloProvider client={client}>
       <ChakraProvider>
         <Box>
-            <div style={{
-              background: `url(./images/logoBigCrop.webp`,
-              backgroundSize: "cover",
-              minHeight: "140vh",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}>
-   
-              <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-              {renderPage()}
-            </div>
+          <div style={{
+            background: `url(./images/logoBigCrop.webp`,
+            backgroundSize: "cover",
+            minHeight: "140vh",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            paddingBottom: "20px",
+            padding: '20px'
+          }}>
+
+            <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+            {renderPage()}
+          </div>
         </Box>
         <Footer />
-    </ChakraProvider>
+      </ChakraProvider>
     </ApolloProvider>
   )
 }

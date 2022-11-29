@@ -1,6 +1,6 @@
 import React from 'react';
-
 import {
+    ChakraProvider,
     Stack,
     Button,
     Table,
@@ -8,35 +8,70 @@ import {
     Tbody,
     Tr,
     Th,
-    Td,
+    Tfoot,
     TableContainer,
-  } from '@chakra-ui/react'
+    Text
+} from '@chakra-ui/react';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { useQuery } from '@apollo/client';
+import { QUERY_CART } from '../utils/queries'; //this query needs to be updated or done away with, just pulls everything now
+import CartRow from '../components/CartRow';
+
+
+const client = new ApolloClient({
+    uri: '/graphql',
+    cache: new InMemoryCache(),
+});
 
 const Cart = () => {
+    const { data } = useQuery(QUERY_CART);
+    // FIX THIS TO ONLY QUERY WHEN 'ADD TO CART' IS CLICKED^^
+    const items = data?.items || [];
+
+    function getTotalPrice() {
+        // Add total $ logic 
+        console.log("Total Price")
+    }
+
+    function getTotalQuantity() {
+        // Add total items logic
+        console.log("Total Quantity")
+    }
+
     return (
-        <Stack>
-        <TableContainer backgroundColor={'#FFF'} spacing={3} mx={20} p={5}>
-            <Table variant='simple'>
-                <Thead fontSize={30} fontWeight="bold">Your Cart</Thead>
-                <Thead mt={3}>
-                <Tr>
-                    <Th>Item</Th>
-                    <Th>Price</Th>
-                    <Th>Quantity</Th>
-                </Tr>
-                </Thead>
-                <Tbody>
-                <Tr>
-                    <Td>Dummy item</Td>
-                    <Td>$0.00</Td>
-                    <Td>1</Td>
-                </Tr>
-                </Tbody>
-            </Table>
-            <Button mt={3} colorScheme='blue'>Check-out</Button>
-        </TableContainer>
-        
-        </Stack>
+        <ApolloProvider client={client}>
+            <ChakraProvider>
+                <Stack>
+
+                    <TableContainer backgroundColor={'#FFF'} spacing={3} mx={20} p={5}>
+                        <Text mb={5} fontSize={30} fontWeight="bold">Your Cart</Text>
+                        <Table variant='simple'>
+                            <Thead>
+                                <Tr>
+                                    <Th>Item</Th>
+                                    <Th>Price</Th>
+                                    <Th>Quantity</Th>
+                                    <Th></Th>
+                                </Tr>
+                            </Thead>
+                            <Tbody>
+                                <CartRow items={items} />
+                            </Tbody>
+                            <Tfoot>
+                                <Th>TOTAL:</Th>
+                                <Th>${getTotalPrice()}</Th>
+                                <Th>{getTotalQuantity()} items</Th>
+                                <Th></Th>
+                            </Tfoot>
+                        </Table>
+                        {/* need to figure out how to link this button to the checkout page */}
+                        <Button mt={10} colorScheme='blue'>
+                            Check-out
+                        </Button>
+                    </TableContainer>
+                </Stack>
+            </ChakraProvider>
+        </ApolloProvider>
     )
 }
 

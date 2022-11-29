@@ -6,11 +6,10 @@ Prep Starts Now is an e-commerce site that uses queries and mutations for retrie
 ## User Story
 
 `As a user, I want to shop for emergency preparedness essentials.`<br />
-`When I am shopping, I can view all items, prices, and the amount in stock.`<br />
+`When I view the website, I have the option to login or signup in the nav bar.`<br />
+`When I am on the home page, I can view all items, prices, and the amount in stock.`<br />
 `When I click 'Add to cart' on an item, the item is sent to my cart.`<br />
 `When I click on the cart icon, I can edit the item quantity or delete an item.`<br />
-`When I am done shopping, I will need to log-in or sign-up on order to check-out.`<br />
-`Once I am logged-in, I can click 'Checkout' and enter my payment information.`<br />
 
 ## Technologies Used
 
@@ -37,7 +36,7 @@ Prep Starts Now is an e-commerce site that uses queries and mutations for retrie
 * [Dina Brady](https://github.com/DinaLo44)
 
 ## Application Appearance
-![PrepStartsNow](./client/public/images/screenshot.png)
+![PrepStartsNow](./client/public/images/screenshot.jpg)
 
 ## Deployed Link
 www.prepstartsnow.com

@@ -1,12 +1,12 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import DisplayCard from '../components/Card';
-import { QUERY_PROMOTIONS } from '../utils/queries';
+import { QUERY_FEATURED_BRANDS } from '../utils/queries';
 
 
 
-const Promotions = () => {
-    const { loading, data } = useQuery(QUERY_PROMOTIONS);
+const FeaturedBrands = () => {
+    const { loading, data } = useQuery(QUERY_FEATURED_BRANDS);
     const items = data?.items || [];
 
 
@@ -17,4 +17,4 @@ const Promotions = () => {
     )
 }
 
-export default Promotions;
+export default FeaturedBrands;
