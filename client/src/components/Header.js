@@ -38,7 +38,7 @@ const Header = ({ currentPage, handlePageChange }) => {
                   </Link>
                   </WrapItem>
                   <WrapItem>
-                  <Link color='#D3D3D3' to="/FeaturedBrands" onClick={() => handlePageChange('Featured Brands')}>
+                  <Link color='#D3D3D3' to="/FeaturedBrands" onClick={() => handlePageChange('FeaturedBrands')}>
                     Featured Brands
                   </Link>
                   </WrapItem>

@@ -29,7 +29,7 @@ function App() {
     if (currentPage === 'Home') {
       return <Home />;
     }
-    if (currentPage === 'Featured Brands') {
+    if (currentPage === 'FeaturedBrands') {
       return <FeaturedBrands />;
     }
     if (currentPage === 'Electronics') {
@@ -38,19 +38,19 @@ function App() {
     if (currentPage === 'Food Storage') {
       return <FoodStorage />;
     }
-    if (currentPage === 'House Essentials') {
+    if (currentPage === 'HouseEssentials') {
       return <HouseEssentials />;
     }
-    if (currentPage === 'Auto Industrial') {
+    if (currentPage === 'AutoIndustrial') {
       return <AutoIndustrial />;
     }
     if (currentPage === 'Promotions') {
       return <Promotions />;
     }
-    if (currentPage === 'Health & Safety') {
+    if (currentPage === 'HealthSafety') {
       return <HealthSafety />;
     }
-    if (currentPage === 'Resource Center') {
+    if (currentPage === 'ResourceCenter') {
       return <ResourceCenter />;
     }
     if (currentPage === 'Login') {
