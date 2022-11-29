@@ -53,12 +53,12 @@ const Cart = () => {
                     <TableContainer backgroundColor={'#FFF'} p={5} mx={"5%"}>
                     {/* minWidth={'520px'} */}
                         <Text mb={5} fontSize={30} fontWeight="bold">Your Cart</Text>
-                        <Table variant='simple'>
+                        <Table variant='simple' size='xsm'>
                             <Thead>
                                 <Tr>
                                     <Th>Item</Th>
                                     <Th>Price</Th>
-                                    <Th>Quantity</Th>
+                                    <Th>Qty</Th>
                                     <Th>Remove</Th>
                                 </Tr>
                             </Thead>
@@ -67,7 +67,7 @@ const Cart = () => {
                             </Tbody>
                             
                             <Tfoot>
-                                <Tr>
+                                <Tr fontWeight="bold">
                                     <Td>TOTAL:</Td>
                                     <Td>${getTotalPrice()}</Td>
                                     <Td>{getTotalQuantity()} items</Td>

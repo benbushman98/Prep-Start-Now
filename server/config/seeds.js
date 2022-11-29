@@ -273,7 +273,7 @@ db.once('open', async () => {
       name: 'Emergency Whistle',
       description:
         'A loud whistle that can be heard up to a mile away',
-      image: 'Whistle.png',
+      image: 'whistle.png',
       category: categories[8]._id,
       price: 9.99,
       quantity: 25
