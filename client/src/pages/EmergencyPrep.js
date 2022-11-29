@@ -1,12 +1,12 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import DisplayCard from '../components/Card';
-import { QUERY_PROMOTIONS } from '../utils/queries';
+import { QUERY_EMERGENCY_PREP } from '../utils/queries';
 
 
 
-const Promotions = () => {
-    const { loading, data } = useQuery(QUERY_PROMOTIONS);
+const EmergencyPrep = () => {
+    const { loading, data } = useQuery(QUERY_EMERGENCY_PREP);
     const items = data?.items || [];
 
 
@@ -17,4 +17,4 @@ const Promotions = () => {
     )
 }
 
-export default Promotions;
+export default EmergencyPrep;
