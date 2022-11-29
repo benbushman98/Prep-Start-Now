@@ -1,12 +1,21 @@
-import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button, Wrap } from '@chakra-ui/react'
+import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, Button, Wrap } from '@chakra-ui/react'
+import {
+    Modal,
+    ModalContent,
+    ModalBody,
+    useDisclosure,
+    Center,
+    ModalCloseButton
+  } from '@chakra-ui/react'
 
 
 function DisplayCard(props) {
 
-    function sendToCart() {
-        // Add logic that sends the item to the cart
-        console.log("Send Item to Cart")
-    }
+    // function sendToCart() {
+    //     // Add logic that sends the item to the cart
+    // }
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
         <div>
@@ -45,11 +54,20 @@ function DisplayCard(props) {
                         </CardBody>
                         <Divider />
                         <CardFooter>
-                            <ButtonGroup spacing='2'>
-                                <Button colorScheme='blue' onClick={sendToCart}>
+                                <Button colorScheme='blue' onClick={onOpen}>
                                     Add to cart
                                 </Button>
-                            </ButtonGroup>
+                                <Modal isOpen={isOpen} onClose={onClose}>
+                                    
+                                    <ModalContent>
+                                        <ModalBody p={5}>
+                                            <ModalCloseButton />
+                                            <Center>
+                                                Item added!
+                                            </Center>
+                                        </ModalBody>
+                                    </ModalContent>
+                                </Modal>
                         </CardFooter>
                     </Card>
                 ))}
