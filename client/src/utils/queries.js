@@ -177,7 +177,21 @@ query Item($id: ID!) {
   }
 }`;
 
-
+export const QUERY_ALL_ITEMS = gql`
+  {
+    items {
+      _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
+      }
+      image
+    }
+  }
+`;
 
 
 
