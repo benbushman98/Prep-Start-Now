@@ -32,7 +32,7 @@ export const QUERY_ELECTRONICS = gql`
   }
 `;
 
-export const QUERY_FOODSTORAGE = gql`
+export const QUERY_FOODSTORAGE72HRKITS = gql`
  {
     items(category: "6384f5d343d84c3fdfb92deb"){
       _id
@@ -142,6 +142,22 @@ export const QUERY_EMERGENCY_PREP = gql`
      }
    }
  }
+`;
+
+export const QUERY_CART = gql`
+  {
+    items {
+      _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
+      }
+      image
+    }
+  }
 `;
 
 //FIXED QUERY (ITEM BY ID)
