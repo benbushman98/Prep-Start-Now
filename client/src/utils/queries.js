@@ -146,6 +146,7 @@ export const QUERY_EMERGENCY_PREP = gql`
 
 
 export const QUERY_ALL_ITEMS = gql`
+>>>>>>> 06f7e630d40d4b13cd4a37c7da98bf1066d396b1
   {
     items {
       _id
@@ -161,6 +162,85 @@ export const QUERY_ALL_ITEMS = gql`
   }
 `;
 
+export const FOOD_STORAGE_72_HR_KITS = gql`
+  {
+    items {
+      _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
+      }
+      image
+    }
+  }
+`;
+
+export const HOUSEHOLD_ESSENTIALS = gql`
+  {
+    items {
+      _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
+      }
+      image
+    }
+  }
+`;
+
+export const AUTO_INDUSTRIAL = gql`
+  {
+    items {
+      _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
+      }
+      image
+    }
+  }
+`;
+
+export const PROMOTIONS = gql`
+  {
+    items {
+      _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
+      }
+      image
+    }
+  }
+`;
+
+export const HEALTH_AND_SAFETY = gql`
+  {
+    items {
+      _id
+      name
+      description
+      price
+      quantity
+      category {
+        name
+      }
+      image
+    }
+  }
+`;
 
 
 export const QUERY_CART = gql`
