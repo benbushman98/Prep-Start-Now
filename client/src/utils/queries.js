@@ -32,7 +32,7 @@ export const QUERY_ELECTRONICS = gql`
   }
 `;
 
-export const QUERY_FOODSTORAGE72HRKITS = gql`
+export const QUERY_FOODSTORAGE = gql`
  {
     items(category: "6384f5d343d84c3fdfb92deb"){
       _id
