@@ -8,13 +8,14 @@ import {
     Tbody,
     Tr,
     Th,
+    Td,
     Tfoot,
     TableContainer,
-    Text
+    Text,
 } from '@chakra-ui/react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { useQuery } from '@apollo/client';
-import { QUERY_CART } from '../utils/queries'; //this query needs to be updated or done away with, just pulls everything now
+import { QUERY_CART } from '../utils/queries'; //this query needs to be updated or done away with, just pulls everything for now
 import CartRow from '../components/CartRow';
 
 
@@ -30,19 +31,24 @@ const Cart = () => {
 
     function getTotalPrice() {
         // Add total $ logic 
-        console.log("Total Price")
+        console.log("Total Price");
+        return (
+            5186.61
+        )
     }
 
     function getTotalQuantity() {
         // Add total items logic
         console.log("Total Quantity")
+        return (
+            22
+        )
     }
 
     return (
         <ApolloProvider client={client}>
             <ChakraProvider>
                 <Stack>
-
                     <TableContainer backgroundColor={'#FFF'} spacing={3} mx={20} p={5}>
                         <Text mb={5} fontSize={30} fontWeight="bold">Your Cart</Text>
                         <Table variant='simple'>
@@ -51,17 +57,20 @@ const Cart = () => {
                                     <Th>Item</Th>
                                     <Th>Price</Th>
                                     <Th>Quantity</Th>
-                                    <Th></Th>
+                                    <Th>Remove</Th>
                                 </Tr>
                             </Thead>
                             <Tbody>
                                 <CartRow items={items} />
                             </Tbody>
+                            
                             <Tfoot>
-                                <Th>TOTAL:</Th>
-                                <Th>${getTotalPrice()}</Th>
-                                <Th>{getTotalQuantity()} items</Th>
-                                <Th></Th>
+                                <Tr>
+                                    <Td>TOTAL:</Td>
+                                    <Td>${getTotalPrice()}</Td>
+                                    <Td>{getTotalQuantity()} items</Td>
+                                    <Td></Td>
+                                </Tr>
                             </Tfoot>
                         </Table>
                         {/* need to figure out how to link this button to the checkout page */}

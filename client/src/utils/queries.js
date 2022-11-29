@@ -147,20 +147,13 @@ export const QUERY_EMERGENCY_PREP = gql`
 export const QUERY_CART = gql`
   {
     items {
-      _id
       name
-      description
       price
       quantity
-      category {
-        name
-      }
-      image
     }
   }
 `;
 
-//FIXED QUERY (ITEM BY ID)
 export const QUERY_ITEM =gql`
 query Item($id: ID!) {
   item(_id: $id) {
@@ -192,9 +185,3 @@ export const QUERY_ALL_ITEMS = gql`
     }
   }
 `;
-
-
-
-
-
-
