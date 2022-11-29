@@ -1,12 +1,12 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import DisplayCard from '../components/Card';
-import { QUERY_FOODSTORAGE72HRKITS } from '../utils/queries';
+import { QUERY_FOODSTORAGE } from '../utils/queries';
 
 
 
-const FoodStorage72HourKits = () => {
-    const { loading, data } = useQuery(QUERY_FOODSTORAGE72HRKITS);
+const FoodStorage = () => {
+    const { loading, data } = useQuery(QUERY_FOODSTORAGE);
     const items = data?.items || [];
 
 
@@ -17,4 +17,4 @@ const FoodStorage72HourKits = () => {
     )
 }
 
-export default FoodStorage72HourKits;
+export default FoodStorage;
