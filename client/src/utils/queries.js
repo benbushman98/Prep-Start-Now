@@ -16,8 +16,6 @@ export const QUERY_FEATURED_BRANDS = gql`
   }
 `;
 
-export const ELECTRONICS = gql`
-=======
 export const QUERY_ELECTRONICS = gql`
  {
     items(category: "6384f5d343d84c3fdfb92de8"){
