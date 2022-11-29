@@ -146,7 +146,6 @@ export const QUERY_EMERGENCY_PREP = gql`
 
 
 export const QUERY_ALL_ITEMS = gql`
->>>>>>> 06f7e630d40d4b13cd4a37c7da98bf1066d396b1
   {
     items {
       _id
