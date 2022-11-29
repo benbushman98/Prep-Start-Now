@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const QUERY_FEATURED_BRANDS = gql`
  {
-    items(category: "637eae47d617bf996dde5622"){
+    items(category: "6384f5d343d84c3fdfb92de7"){
       _id
       name
       description

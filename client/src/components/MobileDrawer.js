@@ -29,7 +29,7 @@ const MobileDrawer = () => {
                     <Flex flex={'1'} >
                         <ButtonGroup variant="link" justify="center">
                             <Flex direction={'column'}  >
-                                <Link my="10px" fontSize="lg" color='#FFB900' href="/home">
+                                <Link my="10px" fontSize="lg" color='#FFB900' href="/">
                                     Home
                                 </Link>
                                 <Link my="10px" fontSize="lg" color='white' href="/featuredbrands">

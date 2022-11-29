@@ -33,7 +33,7 @@ const Header = ({ currentPage, handlePageChange }) => {
             <ButtonGroup variant="link" spacing="10" justify="center">
               <Wrap spacing='30px' justify="center">
                 <WrapItem>
-                  <Link color='#D3D3D3' to="/Home" onClick={() => handlePageChange('Home')}>
+                  <Link color='#D3D3D3' to="/" onClick={() => handlePageChange('Home')}>
                     Home
                   </Link>
                   </WrapItem>
