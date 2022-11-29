@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import FeaturedBrands from './pages/FeaturedBrands';
 import Electronics from './pages/Electronics';
-import FoodStorage from './pages/FoodStorage72HrKits';
+import FoodStorage from './pages/FoodStorages';
 import HouseEssentials from './pages/HouseHoldEssentials';
 import AutoIndustrial from './pages/AutoIndustrial';
 import Promotions from './pages/Promotions';
@@ -35,7 +35,7 @@ function App() {
     if (currentPage === 'Electronics') {
       return <Electronics />;
     }
-    if (currentPage === 'Food Storage') {
+    if (currentPage === 'FoodStorage') {
       return <FoodStorage />;
     }
     if (currentPage === 'HouseEssentials') {
