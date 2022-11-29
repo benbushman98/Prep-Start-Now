@@ -26,6 +26,7 @@ Prep Starts Now is an e-commerce site that uses queries and mutations for retrie
 * Include 'My Account' page that shows user account details
 * Purchase History page
 * Functional Stripe
+* Resource Center
 
 ## Contributor GitHubs
 
