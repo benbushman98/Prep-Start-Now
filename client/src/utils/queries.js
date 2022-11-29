@@ -32,7 +32,7 @@ export const QUERY_ELECTRONICS = gql`
   }
 `;
 
-export const QUERY_FOODSTORAGE72HRKITS = gql`
+export const QUERY_FoodStorage = gql`
  {
     items(category: "6384f5d343d84c3fdfb92deb"){
       _id
@@ -146,103 +146,6 @@ export const QUERY_EMERGENCY_PREP = gql`
 
 
 export const QUERY_ALL_ITEMS = gql`
-  {
-    items {
-      _id
-      name
-      description
-      price
-      quantity
-      category {
-        name
-      }
-      image
-    }
-  }
-`;
-
-export const FOOD_STORAGE_72_HR_KITS = gql`
-  {
-    items {
-      _id
-      name
-      description
-      price
-      quantity
-      category {
-        name
-      }
-      image
-    }
-  }
-`;
-
-export const HOUSEHOLD_ESSENTIALS = gql`
-  {
-    items {
-      _id
-      name
-      description
-      price
-      quantity
-      category {
-        name
-      }
-      image
-    }
-  }
-`;
-
-export const AUTO_INDUSTRIAL = gql`
-  {
-    items {
-      _id
-      name
-      description
-      price
-      quantity
-      category {
-        name
-      }
-      image
-    }
-  }
-`;
-
-export const PROMOTIONS = gql`
-  {
-    items {
-      _id
-      name
-      description
-      price
-      quantity
-      category {
-        name
-      }
-      image
-    }
-  }
-`;
-
-export const HEALTH_AND_SAFETY = gql`
-  {
-    items {
-      _id
-      name
-      description
-      price
-      quantity
-      category {
-        name
-      }
-      image
-    }
-  }
-`;
-
-
-export const QUERY_CART = gql`
   {
     items {
       _id
